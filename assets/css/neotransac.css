@@ -1,0 +1,172 @@
+* {
+	font-family: Calibri;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+a:hover {
+	text-decoration: none !important;
+}
+
+.browser_search {
+	border: solid 0px silver !important;
+	border-bottom: solid 1px #009688 !important;
+	height: 35px !important;
+	border-radius: 0px !important;
+}
+
+.comment {
+   font-size:0.8em;
+}
+
+.morecontent {
+	word-break: break-word !important;
+	white-space:normal;
+	display: block;
+	width: 100%;
+}
+
+	.morecontent > span {
+		word-break: break-word !important;
+		white-space: normal;
+		display: block;
+		width: 100%;
+	}
+.long-text {
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+.label-black {
+	vertical-align: top;
+	padding: 5px;
+	color: black;
+	font-weight: bold;
+	background-color: #ddd;
+}
+
+.label-darkred {
+	vertical-align: top;
+	padding: 5px;
+	color: darkred;
+	background-color: #ddd;
+}
+
+.filter-option-inner-inner {
+	color:black;
+}
+
+#sidebar-wrapper {
+	min-height: 100vh;
+	margin-left: -20rem;
+	-webkit-transition: margin .35s ease-out;
+	-moz-transition: margin .35s ease-out;
+	-o-transition: margin .35s ease-out;
+	transition: margin .35s ease-out;
+}
+
+	#sidebar-wrapper .sidebar-heading {
+		padding: 0;
+		display:inline;
+	}
+
+	#sidebar-wrapper .list-group {
+		width: 20rem;
+	}
+
+#page-content-wrapper {
+	min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+	margin-left: 0;
+}
+
+.drop_zone {
+	border: 5px dotted silver;
+	background-color: white;
+	width: 100%;
+	height: 50px;
+}
+
+.drop_zone_over {
+	border: 5px dotted grey;
+	background-color: antiquewhite;
+}
+
+.boxedfield {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: solid 1px transparent;
+	border-radius: 5px;
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+}
+
+.form-radio {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: inline-block;
+	position: relative;
+	background-color: #f1f1f1;
+	color: #666;
+	top: 10px;
+	height: 30px;
+	width: 30px;
+	border: 1px solid #666;
+	border-radius: 50px;
+	cursor: pointer;
+	margin-right: 7px;
+	outline: none;
+}
+
+.form-radio:checked::before {
+	position: relative;
+	font: 13px/1 'Open Sans', sans-serif;
+	left: 10px;
+	top: 2px;
+	content: 'X';
+}
+
+.form-radio:hover {
+	background-color: #f7f7f7;
+}
+
+.form-radio:checked {
+	background-color: #f1f1f1;
+}
+
+@media (min-width: 300px) {
+	#sidebar-wrapper {
+		margin-left: 0;
+	}
+
+	#page-content-wrapper {
+		min-width: 0;
+		width: 100%;
+	}
+
+	#wrapper.toggled #sidebar-wrapper {
+		margin-left: -20rem;
+	}
+}
