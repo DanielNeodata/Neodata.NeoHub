@@ -54,6 +54,8 @@ class Account_moves extends MY_Model {
                 array("field"=>"total","format"=>"money"),
                 array("field"=>"details","format"=>"more"),
                 array("field"=>"","format"=>null),
+				array("field"=>"btnFacturar","format"=>"html"),
+
             );
             $values["filters"]=array(
                 array("name"=>"browser_search", "operator"=>"like","fields"=>array("amount","iva","total")),
@@ -286,6 +288,8 @@ class Account_moves extends MY_Model {
             return logError($e,__METHOD__ );
         }
     }
-
-
+	public function Facturar($values){
+		$fields["facturado"]=date(FORMAT_DATE_DMY);
+	    return parent::save($values,$fields);
+	}
 }

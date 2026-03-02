@@ -1255,6 +1255,13 @@ var _FUNCTIONS = {
 			$(".btn-api_search").click();
 		});
 	},
+	onFacturar: function (_this) {
+		var _id = _this.attr("data-id");
+		if (!confirm("Se marcará como facturado ¿Acepta?")) { return false; }
+		_AJAX.UiFacturar({ "id": _id }).then(function (data) {
+			$(".btn-browser-search").click();
+		});
+	},
 	onSetActiveCredentials: function (_this) {
 		_active = {
 			"types_transactions": _this.find(':selected').attr("data-types_transactions"),

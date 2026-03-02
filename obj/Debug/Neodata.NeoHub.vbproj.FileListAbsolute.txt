@@ -1,3 +1,5 @@
 D:\Datos\www\neodata.code\Neodata.NeoHub\obj\Debug\Neodata.NeoHub.vbprojAssemblyReference.cache
 D:\Datos\www\neodata.code\Neodata.NeoHub\obj\Debug\Neodata.NeoHub.vbproj.GenerateResource.cache
 D:\Datos\www\neodata.code\Neodata.NeoHub\obj\Debug\Neodata.NeoHub.vbproj.AssemblyReference.cache
+D:\General\www\neodata.code\Neodata.NeoHub\obj\Debug\Neodata.NeoHub.vbproj.AssemblyReference.cache
+D:\General\www\neodata.code\Neodata.NeoHub\obj\Debug\Neodata.NeoHub.vbproj.GenerateResource.cache

@@ -90,6 +90,22 @@ class Backend extends MY_Controller {
             $this->output(logError($e,__METHOD__ ));
         }
     }
+    public function Facturar(){
+        try {
+            $raw=$this->rawInput();
+            if ($raw!=null)  {throw new Exception($raw);}
+            $this->status=$this->init();
+            $_POST['mode'] = bin2hex(getEncryptionKey()); /*Avoid authentication check*/
+            $_POST['function'] = 'Facturar';
+            $_POST['module'] = MOD_FINANCES;
+            $_POST['model'] = 'Account_moves';
+            $_POST['table'] = 'Account_moves';
+            $this->neocommand(true);
+        }
+        catch (Exception $e){
+            $this->output(logError($e,__METHOD__ ));
+        }
+    }
 
 	
     public function logout(){

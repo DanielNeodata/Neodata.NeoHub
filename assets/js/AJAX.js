@@ -428,6 +428,14 @@ var _AJAX = {
 	 * /
 	 * MOD_FINANCES
 	 */
+	UiFacturar: function (_json) {
+		return new Promise(
+			function (resolve, reject) {
+				_json["method"] = "api.backend/Facturar"; //method
+				_AJAX.ExecuteDirect(_json, null).then(function (data) { resolve(data); }).catch(function (err) { reject(err); });
+			});
+	},
+
 	UiGetClearing: function (_json) {
 		return new Promise(
 			function (resolve, reject) {

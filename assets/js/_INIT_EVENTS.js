@@ -229,6 +229,9 @@
 														$("body").off("click", ".btn-verGrilla").on("click", ".btn-verGrilla", function (e) {
 															_FUNCTIONS.onViewGrid($(this));
 														});
+														$("body").off("click", ".btn-Facturar").on("click", ".btn-Facturar", function (e) {
+															_FUNCTIONS.onFacturar($(this));
+														});
 														setInterval(function () { _FUNCTIONS.onMessagesNotification($(this)); }, 60000);
 													});
 												});
