@@ -75,7 +75,7 @@ $query_builder = true;
 
 $db['dbIntranet'] = array(
 	'dsn'	=> '',
-	'hostname' => 'DESARROLLO\SQLEXPRESS',
+	'hostname' => 'localhost',
 	'username' => 'sa',
 	'database' => 'dbNeoTransac',
 	'password' => '08Z5il37',

@@ -14,7 +14,36 @@ if (!isset($parameters["records"])) {
     if(is_array($parameters["records"]["data"])) {
         foreach ((array)$parameters["records"]["data"] as $record){
             $nodata="";
-            $html.="<tr class='record-".secureField($record,"id")."'>";
+            $style="";
+            if(isset($parameters["conditionalBackground"])) {
+                foreach($parameters["conditionalBackground"] as $conditional){
+                    $style="";
+                    $OK=false;
+                    if (!isset($conditional["operator"])) {$conditional["operator"]="=";}
+                    switch($conditional["operator"]) {
+                        case "=":
+                            $OK=($record[$conditional["field"]]==$conditional["value"]);
+                            break;
+                        case "!=":
+                            $OK=($record[$conditional["field"]]!=$conditional["value"]);
+                            break;
+                        case ">=":
+                            $OK=($record[$conditional["field"]]>=$conditional["value"]);
+                            break;
+                        case "<=":
+                            $OK=($record[$conditional["field"]]<=$conditional["value"]);
+                            break;
+                        case ">":
+                            $OK=($record[$conditional["field"]]>$conditional["value"]);
+                            break;
+                        case "<":
+                            $OK=($record[$conditional["field"]]<$conditional["value"]);
+                            break;
+                    }
+                    if ($OK) {$style="style='background-color:".$conditional["color"].";'";break;}
+                }
+            }
+            $html.="<tr class='record-".secureField($record,"id")."' ".$style.">";
             $html.=getTdCheck($parameters,$record,true);
             $html.=getTdEdit($parameters,$record,true);
             foreach ($parameters["columns"] as $column) {$html.=getTdCol($parameters,$record,$column);}

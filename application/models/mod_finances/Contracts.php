@@ -49,6 +49,10 @@ class Contracts extends MY_Model {
                   "<span class='badge badge-info'>".lang('p_date_from')."</span> <input id='browser_date_from' name='browser_date_from' type='date' class='form-control'/>",
                   "<span class='badge badge-info'>".lang('p_date_to')."</span> <input id='browser_date_to' name='browser_date_to' type='date' class='form-control'/>",
             );
+            $values["conditionalBackground"]=array(
+                array("field"=>"revisarMes","value"=>"1","color"=>"orange"),
+            );
+
             return parent::brow($values);
         }
         catch(Exception $e){
@@ -165,7 +169,8 @@ class Contracts extends MY_Model {
 					'id_type_iva' => $id_type_iva,
 					'details' => $details,
                     'monthly' => $monthly,
-					'link_doc' => $values["link_doc"]
+					'link_doc' => $values["link_doc"],
+					'revisarMes' => $values["revisarMes"]
                 );
 			} else {
                 $fields = array(
@@ -180,7 +185,8 @@ class Contracts extends MY_Model {
 					'id_type_iva' => $id_type_iva,
 					'details' => $details,
                     'monthly' => $monthly,
-					'link_doc' => $values["link_doc"]
+					'link_doc' => $values["link_doc"],
+					'revisarMes' => $values["revisarMes"]
                 );
 			}
             $saved=parent::save($values,$fields);

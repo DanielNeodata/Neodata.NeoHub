@@ -21,6 +21,7 @@ $html.=getInput($parameters,array("col"=>"col-md-2","name"=>"date_from","type"=>
 $html.=getInput($parameters,array("col"=>"col-md-2","name"=>"date_to","type"=>"date","class"=>"form-control text dbase validate"));
 $html.=getHtmlResolved($parameters,"controls","id_type_currency",array("col"=>"col-md-3"));
 $html.=getInput($parameters,array("custom"=>"step='any'","col"=>"col-md-5","name"=>"monthly","type"=>"number","class"=>"form-control monthly number dbase validate"));
+$html.=getInput($parameters,array("col"=>"col-md-2","name"=>"revisarMes","type"=>"checkbox","class"=>"form-control dbase"));
 $html.="</div>";
 
 $html.="<div class='form-row'>";
