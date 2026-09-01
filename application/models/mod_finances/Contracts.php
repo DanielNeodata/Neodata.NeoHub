@@ -29,6 +29,7 @@ class Contracts extends MY_Model {
                 array("field"=>"date_from","format"=>"date"),
                 array("field"=>"date_to","format"=>"date"),
                 array("field"=>"user_invoice_description","format"=>"type"),
+                array("field"=>"cuit","format"=>"code"),
                 array("field"=>"application_description","format"=>"type"),
                 array("field"=>"currency_iso","format"=>"text"),
                 array("field"=>"monthly","format"=>"money"),

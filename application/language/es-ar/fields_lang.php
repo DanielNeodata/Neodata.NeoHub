@@ -263,3 +263,4 @@ $lang['p_default_code']="Código";
 $lang['p_show_map']="Usar API Maps";
 $lang['p_link_doc']="Link a documento con propuesta";
 $lang['p_revisarMes']="Revisión mensual";
+$lang['p_cuit']="CUIT";

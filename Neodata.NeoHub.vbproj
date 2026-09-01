@@ -1030,6 +1030,7 @@
     <Content Include="application\views\mod_api\neo_tools\formQR.php" />
     <Content Include="application\models\mod_api\Neo_schedule.php" />
     <Content Include="application\views\mod_api\neo_schedule\form.php" />
+    <Content Include="application\views\mod_backend\applications\abm.php" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

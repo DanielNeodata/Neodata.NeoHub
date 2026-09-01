@@ -2,7 +2,7 @@
        $html="<div class='container-fluid area-legales' style='margin-top:15px;'>";
        $html.="<div class='row'>";
        $html.="   <div class='col-6 text-right'>";
-       $html.="      <a class='btn btn-info btn-raised' href='http://www.gruponeodata.com/pdf/Neodata-Legales.pdf' target='_blank'>Términos y condiciones de uso</a>";
+       $html.="      <a class='btn btn-info btn-raised' href='https://www.neodata.ar/wp-content/uploads/2025/04/Neodata-Legales.pdf' target='_blank'>Términos y condiciones de uso</a>";
        $html.="   </div>";
        $html.="   <div class='col-6 text-left style='font-size:0.8em;'>";
        $html.="      <a href='http://www.gruponeodata.com' target='_blank'>".TITLE_GENERAL." - www.gruponeodata.com</a>";
